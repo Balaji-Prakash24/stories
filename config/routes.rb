@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "replies/index"
+  get "replies/create"
+  get "replies/show"
   get "comments/index"
   get "comments/create"
   get "comments/show"

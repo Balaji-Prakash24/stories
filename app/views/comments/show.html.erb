@@ -1,4 +1,14 @@
-<div>
-  <h1 class="font-bold text-4xl">Comments#show</h1>
-  <p>Find me in app/views/comments/show.html.erb</p>
+<div class="container">
+  <h1 class="text-3xl font-bold ">Comments</h1>
+  <h1 class="text-3xl font-bold ">Title: <%= @story.title %></h1>
+  <% @comment.each do |comment| %>
+    <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+      <div class="flex-col items-center mb-4">
+        <h2 class="text-xl font-semibold mb-2">Commented by: <%= comment.user_name %></h2>
+        <h2 class="text-xl font-semibold mb-2"><%= comment.description %></h2>
+        <%= link_to "reply", new_reply_path(comment) %>
+      </div>
+    </div>
+  <% end %>
 </div>
+
