@@ -30,3 +30,6 @@ Rails.application.routes.draw do
 
   resources :replies
 end
+
+
+post 'custom_data/create_rows', to: 'custom_data#create_rows', as: :custom_data_create_rows
