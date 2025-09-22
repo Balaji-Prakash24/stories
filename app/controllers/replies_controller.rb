@@ -1,8 +1,7 @@
 class RepliesController < ApplicationController
 
   before_action :set_story,  only: [:new]
-  before_action :set_comment, only: [:create]
-
+  before_action :set_comment
   def index
   end
 
@@ -23,11 +22,11 @@ class RepliesController < ApplicationController
   def set_story
     @story = Story.find(params[:format])
 
+
   end
   def set_comment
     story = Story.find(params[:format])
-    @comment = story.comment
-    binding.pry
+    @comment = story.comments
   end
 
 

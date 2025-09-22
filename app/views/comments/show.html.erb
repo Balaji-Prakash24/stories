@@ -6,7 +6,7 @@
       <div class="flex-col items-center mb-4">
         <h2 class="text-xl font-semibold mb-2">Commented by: <%= comment.user_name %></h2>
         <h2 class="text-xl font-semibold mb-2"><%= comment.description %></h2>
-        <%= link_to "reply", new_reply_path(comment) %>
+        <%= link_to "reply", new_reply_path(comment), class: "text-blue-600 hover:underline"  %>
       </div>
     </div>
   <% end %>
