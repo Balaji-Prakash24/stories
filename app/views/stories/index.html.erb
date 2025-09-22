@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="text-3xl font-bold ">List of Stories</h1>
+    <% @stories.each do |story| %>
+      <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex-col items-center mb-4">
+            <h2 class="text-xl font-semibold mb-2"><%= story.title %></h2>
+            <%=link_to "Like", likes_create_path(story.id) %> (<%= story.likes.count %>)
+          </div>
+          <%=link_to "Click to view the story", stories_show_path(story) ,class: "text-blue-600 hover:underline"%>
+      </div>
+    <% end %>
+</div>
+
