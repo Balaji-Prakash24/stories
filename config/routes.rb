@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   resources :likes
 
   resources :comments
+
+  resources :replies
 end

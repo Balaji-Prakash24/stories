@@ -1,11 +1,11 @@
 <div class="container">
   <h1 class="text-3xl font-bold ">Title: <%= @story.title %></h1>
   <h2 class="text-xl font-semibold ">Like:<%= @story.likes.count %></h2>
+  <h2 class="text-xl font-semibold ">Comments:<%= @story.comments.count %></h2>
+  <%=link_to "Click to post a comment",new_comment_path(@story)  %>
   <div class="bg-white shadow-md rounded-lg p-6">
     <p class="mb-4"><%= @story.description %></p>
     <p class="mb-4 text-blue-600 font-bold">Post Created by: <%= @story.by %></p>
-    <p class="text-sm text-gray-500">Created at: <%= @story.created_at.strftime("%B %d, %Y") %></p>
-    <p class="text-sm text-gray-500">Updated at: <%= @story.updated_at.strftime("%B %d, %Y") %></p>
   </div>
   <div class="mt-4">
     <%= link_to 'Back to Stories', stories_path, class: "text-blue-600 hover:underline" %>

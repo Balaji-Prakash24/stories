@@ -5,6 +5,7 @@
           <div class="flex-col items-center mb-4">
             <h2 class="text-xl font-semibold mb-2"><%= story.title %></h2>
             <%=link_to "Like", likes_create_path(story.id) %> (<%= story.likes.count %>)
+            <p>Comments (<%=story.comments.count %>)</p>
           </div>
           <%=link_to "Click to view the story", stories_show_path(story) ,class: "text-blue-600 hover:underline"%>
       </div>
